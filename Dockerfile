@@ -1,6 +1,11 @@
-FROM centos:latest
+#FROM centos:latest
+FROM ubuntu:24.04
 MAINTAINER divesh saini <learningcloud409@gmail.com>
-RUN yum -y install httpd
+RUN apt-get update && \
+    apt-get install -y apache2 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+#RUN yum -y install httpd
 #zip\
 #unzip
 
@@ -10,5 +15,7 @@ RUN yum -y install httpd
 #RUN unzip photogenic.zip
 #RUN cp -rvf photogenic/*.
 #RUN rm -rf photogenic photogenic.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+#CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
 EXPOSE 80 443

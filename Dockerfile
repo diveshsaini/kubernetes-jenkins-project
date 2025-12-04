@@ -1,6 +1,6 @@
 FROM centos:7
-MAINTAINER learningcloud409@gmail.com
-RUN yum install httpd
+MAINTAINER divesh saini <learningcloud409@gmail.com>
+RUN yum -y install httpd
 #zip\
 #unzip
 

@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 MAINTAINER divesh saini <learningcloud409@gmail.com>
 RUN yum -y install httpd
 #zip\

@@ -18,4 +18,4 @@ RUN apt-get update && \
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
-EXPOSE 80 443
+EXPOSE 80

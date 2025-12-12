@@ -1,4 +1,4 @@
-- host: kube
+- hosts: kube
   become: true
   tasks:
      - name: create new deployment
